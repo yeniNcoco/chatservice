@@ -1,55 +1,54 @@
 # Chatting Service Project
 
 ## Objectives
-- 학부생 때 배운 C++을 활용하여 간단한 채팅 서비스를 구현한다.
-- 객체지향 프로그래밍을 적용한 버전으로 리팩토링을 수행한다.
-- C++ 미니프로젝트에서 만든 미니게임을 채팅 서비스에 넣어본다.
+- Implementing a simple chat service with C++.
+- Conduct a refactoring process with object-oriented version.
+- Add mini game that I made in C++ class.
 
-## 프로젝트 수행 계기
-- 1학년 1학기 수업에서 C++에 대한 기본 수업을 배웠음
-- 1학년 여름학기 수업에서 Advanced Java를 배우며 소켓통신에 대해 배웠음
-- 이 둘을 융합시킬 수 있는 프로젝트를 생각하다보니 채팅 서비스 프로젝트를 계획하게 됨
-- 특히, 베이직한 개념들과 간단하게 코드를 짜본 것이 전부이기 때문에, 조금 더 실전 프로젝트와 같은 코드를 짜보고자 함
-- 처음부터 백지 상태에서 코드를 짜는 것은 난이도가 너무 높으므로, 먼저 레퍼런스 코드를 이해하고 이를 리팩토링하는 방식으로 수행하고자 함
-- 학업와 병행해야하므로 자투리 시간을 최대한 활용, 기간은 학업 일정을 고려하여 여유있게 설정
+## Purpose of the project
+- I've took basic c++ programing during 1st semester.
+- I've learned about socket networking in Advanced Java class.
+- I wanted to make a chat service program, which can integrate knowledge which I've learned. 
+- Espacially, What I've done during the classes was just making a short code. But I eager to learn actual code which are used in real field.
+- It was hard for me to start from the bottom. So I started to understand reference code then started refactorizing the code.
+- I had to study other subjects so I made enough spots for them, and built code using a spare time.
 
 
-## Project 목표 수행 일정
+## Dues of project goals
 
-|기간|목표|
+|due|goal|
 |--|--|
-|2024.10.01 ~ 2024.10.15| 프로젝트 주제 선정 및 레퍼런스 코드 선정|
-|2024.10.15 ~ 2024.10.31| 레퍼런스 코드에 대해 한 줄 한 줄 이해하기|
-|2024.11.01 ~ 2024.11.07| 라인 바이 라인 주석 달기로 전체 복습|
-|2024.11.08 ~ 2024.11.15| Winsocket -> Unix 버전으로 변경, 올바르게 돌아가는지 확인|
-|2024.11.16 ~ 2024.11.30| 객체지향 스타일로 코드 리팩토링|
-|2024.12.01 ~ 2024.12.15| 미니게임을 채팅에 추가|
+|10.01.2024 ~ 10.15.2024|selecting a topic of project and chose a reference|
+|10.15.2024 ~ 10.31.2024|Understand every single code in reference|
+|11.01.2024~ 11.07.2024| Review the overall code by writing comments line by line|
+|11.08.2024 ~ 11.15.2024|Change Winsocket version -> Unix, check it runs|
+|11.16.2024~ 11.30.2024| Refactoring a code into obj-oriented style|
+|12.01.2024 ~ 12.15.2024| Add mini games|
 
 
-## 프로젝트에서 난이도가 높을 것으로 생각되는 점 (극복해야 하는 포인트)
-|수행 작업 | 난이도 높은 포인트|
+## Things considered to be a high level of difficulty in the project (Things I need to overcome)
+|Things to do |difficulties|
 |--|--|
-|레퍼런스 코드 이해|아직 실제 동작 코드를 본 적이 없으므로 어려움이 예상됨|
-|Winsocket을 Unix 버전으로 변경|익숙하지 않은 라이브러리를 다뤄야 함|
-|객체지향 스타일 리팩토링|아직 객체지향에 대해 익숙하지 않아서 어려움이 예상됨|
-|미니게임|복잡한 채팅 서비스 내에 신규 기능을 추가하는 것이 익숙치 않아 어려움이 예상됨|
+|understanding the reference code|Since I have never seen real working code it would be hard|
+|change Winsocket version into Unix version|I need to use unfamlier library |
+|refactoring into obj-oriented code|still beginer level in obj style it would be difficult for me|
+|mini game|Altouogh mini games are already made it would be hard to combining with complicated code|
 
 
 
-## 채팅 서비스 개요
+## chat service overview
 ### Server 
-채팅 서버를 개설하고 Client가 입장 시 Client에 대한 TCP 통신용 소켓을 개방해 채팅방을 만들어 채팅 서비스를 관리함, 유저 정보를 데이터베이스와 연동하여 로그인 기능 및 유저 식별 기능을 추가함
+:Consruct a chatting sever and open TCP communicate socket when client enters, to manege a chat service. Then by linking a user information with database, add login and user identification functions.
 
 ### Client 
-채팅 서버에 참여하는 주체, 채팅 서버에 접속하여 다른 Client와 채팅을 수행한다.
+:A subject participating in a chat server can chats with other clients  by get connected to the chat server 
 
 ## To Be 
-- what’s app 이나 snapchat과 같은 어플의 UI를 참고하여 CLI이지만 유저 경험이 좋은 채팅 앱을 만들기 위해 고민한다. 미적인 요소 또한 놓치고 싶지 않다.
-- 리팩토링 시 소켓을 활용하여 소켓의 각 기능별 들어가야할 내용과 어떻게 표기될 것인지에 대해 고민해보고 함수명이나 구성을 보다 읽기 쉽게 만들기 위한 방법을 고민한다.
-  
+- By referring to the UI of apps such as what’s app or snapchat, we are thinking about creating a chat app that is CLI but has a good user experience. I also don't want to miss out on the aesthetic element.
+- When refactoring, use sockets to think about the content that should be included in each function of the socket and how it will be expressed, and think about ways to make the function name or configuration easier to read.
 
 ## Features
-- 시작화면에서는 로그인, 아이디찾기, 비밀번호 찾기, 회원가입의 기능을 수행
-- 메인화면에서 내정보, 친구, 채팅, 설정의 기능을 수행
-- while문을 통하여 단편적인 방향이 아닌 다시 메인으로 돌아올 수 있는 양방향으로 이동이 가능하도록 설계
-- c++수업때 진행했던 미니프로젝트를 살리고 싶어서 채팅 서비스 안에 미니게임으로 수록
+- Logging in, finding ID, finding password, and singing up are be performed in the start screen.
+- Perform My info, friends, and chatting fuctions in the main page.
+- using a while loop to make it possible to return to main page- movement in both direction.
+- I wanted to revive the mini project I did in C++ class, so I included it as a mini game in the chat service.
