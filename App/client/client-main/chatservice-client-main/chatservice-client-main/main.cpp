@@ -947,6 +947,7 @@ void UserManager::beforeChat() {
 }
 
 int main() {
+  initialize:
     UserManager userManager;
     bool loginSuccess = false;
 
@@ -1113,7 +1114,7 @@ int main() {
                     userManager.modifyPw();
                     continue;
                 case '2':
-                    if (userManager.deleteUser() == 1) return -1;
+                    if (userManager.deleteUser() == 1) goto initialize;
                     else backButton = true;
                     break;  // Added break statement here
                 case '0':
