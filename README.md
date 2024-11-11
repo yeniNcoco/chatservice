@@ -18,12 +18,13 @@
 
 |due|goal|
 |--|--|
-|10.01.2024 ~ 10.15.2024|selecting a topic of project and chose a reference|
-|10.15.2024 ~ 10.31.2024|Understand every single code in reference|
-|11.01.2024~ 11.07.2024| Review the overall code by writing comments line by line|
-|11.08.2024 ~ 11.15.2024|Change Winsocket version -> Unix, check it runs|
-|11.16.2024~ 11.30.2024| Refactoring a code into obj-oriented style|
+|10.01.2024 ~ 10.15.2024| selecting a topic of project and chose a reference|
+|10.15.2024 ~ 10.31.2024| Understand every single code in reference|
+|11.01.2024 ~ 11.07.2024| Review the overall code by writing comments line by line|
+|11.08.2024 ~ 11.15.2024| Change Winsocket version -> Unix, check it runs|
+|11.16.2024 ~ 11.30.2024| Fix the issues|
 |12.01.2024 ~ 12.15.2024| Add mini games|
+|12.16.2024 ~ 12.30.2024| Refactoring a code into obj-oriented style|
 
 
 ## Things considered to be a high level of difficulty in the project (Things I need to overcome)
@@ -53,5 +54,5 @@
 - using a while loop to make it bidirectional.
 - I wanted to revive the mini project I did in C++ class, so I included it as a mini game in the chat service.
 
-## Failures recovery
+## Issues to be fixed
 
