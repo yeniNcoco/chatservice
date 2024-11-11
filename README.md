@@ -2,15 +2,15 @@
 
 ## Objectives
 - Implementing a simple chat service with C++.
-- Conduct a refactoring process with object-oriented version.
-- Add mini game that I made in C++ class.
+- Conduct a refactoring process with an object-oriented version.
+- Add mini-game that I made in C++ class.
 
 ## Purpose of the project
 - I've took basic c++ programing during 1st semester.
 - I've learned about socket networking in Advanced Java class.
-- I wanted to make a chat service program, which can integrate knowledge which I've learned. 
-- Espacially, What I've done during the classes was just making a short code. But I eager to learn actual code which are used in real field.
-- It was hard for me to start from the bottom. So I started to understand reference code then started refactorizing the code.
+- I wanted to make a chat service program, that can integrate knowledge I've learned. 
+- Mostly, What I've done during the classes was just making a short piece code. but I'm eager to learn the actual code used in real-field applications.
+- It was hard for me to start from the bottom. So I started by understand the reference code then started refactorizing the code.
 - I had to study other subjects so I made enough spots for them, and built code using a spare time.
 
 
@@ -41,14 +41,14 @@
 :Consruct a chatting sever and open TCP communicate socket when client enters, to manege a chat service. Then by linking a user information with database, add login and user identification functions.
 
 ### Client 
-:A subject participating in a chat server can chats with other clients  by get connected to the chat server 
+:A subject participating in a chat server can chats with other clients  by get connected to the chat server so a single user can have more than one connection.
 
 ## To Be 
-- By referring to the UI of apps such as what’s app or snapchat, we are thinking about creating a chat app that is CLI but has a good user experience. I also don't want to miss out on the aesthetic element.
-- When refactoring, use sockets to think about the content that should be included in each function of the socket and how it will be expressed, and think about ways to make the function name or configuration easier to read.
+- By referring to the UI of apps such as what’s app or snapchat, I was thinking about creating a chat app that is CLI but has a good user experience. I also don't want to miss out on the aesthetic element.
+- When refactoring, I used sockets to think about the content that should be included in each function of the socket and how it will be expressed, and think about ways to make the function name or configuration easier to read.
 
 ## Features
 - Logging in, finding ID, finding password, and singing up are be performed in the start screen.
 - Perform My info, friends, and chatting fuctions in the main page.
-- using a while loop to make it possible to return to main page- movement in both direction.
+- using a while loop to make it bidirectional.
 - I wanted to revive the mini project I did in C++ class, so I included it as a mini game in the chat service.
