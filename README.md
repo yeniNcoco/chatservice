@@ -52,3 +52,6 @@
 - Perform My info, friends, and chatting fuctions in the main page.
 - using a while loop to make it bidirectional.
 - I wanted to revive the mini project I did in C++ class, so I included it as a mini game in the chat service.
+
+## Failures recovery
+
