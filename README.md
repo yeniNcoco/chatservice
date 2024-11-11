@@ -14,7 +14,7 @@
 - I had to study other subjects so I made enough spots for them, and built code using a spare time.
 
 
-## Dues of project goals
+## Dues of each project goals
 
 |due|goal|
 |--|--|
