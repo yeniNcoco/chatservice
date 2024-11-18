@@ -85,7 +85,7 @@ public:
     UserManager() {
         loadUsers();
     }
-
+    
     void loadUsers() {
         std::ifstream inFile(USER_DATA_FILE);
         if (!inFile) {
@@ -107,7 +107,7 @@ public:
         }
         inFile.close();
     }
-
+    
     void saveUsers() {
         std::ofstream outFile(USER_DATA_FILE);
         for (const auto& user : users) {
@@ -115,7 +115,7 @@ public:
         }
         outFile.close();
     }
-
+    
     int login();
     void searchId();
     void searchPw();
@@ -265,13 +265,13 @@ void createUserMenu() {
     cout << " *               <  회원 가입  >                 *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 아이디 입력                  *\n";
+    cout << " *               >> 이름, 전화번호 입력                  *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 비밀번호 입력                *\n";
+    cout << " *               >> 생년월일(8자리) 입력             *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 이름, 전화번호 입력          *\n";
+    cout << " *               >> 아이디 입력              *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 생년월일(8자리) 입력         *\n";
+    cout << " *               >> 비밀번호 입력             *\n";
     cout << " *                                               *\n";
     cout << " *               >> 완료시 메인화면              *\n";
     cout << " *                                               *\n";
@@ -428,7 +428,7 @@ void settingMenu() {
 int chat_recv() {
     char buf[MAX_SIZE] = { };
     string msg;
-
+    
     while (1) {
         memset(buf, 0, MAX_SIZE);
         ssize_t bytes_received = recv(client_sock, buf, MAX_SIZE, 0);
@@ -471,7 +471,7 @@ int UserManager::login() {
         }
     }
     cout << endl;
-
+    
     for (const auto& user : users) {
         if (user.id == id && user.pw == pw) {
             currentUserId = id;
@@ -502,7 +502,7 @@ void UserManager::searchId() {
         }
         break;
     }
-
+    
     for (const auto& user : users) {
         if (user.name == name && user.phone == phone && user.birth == birth) {
             cout << "▶" << name << "님의 아이디는 " << user.id << "입니다." << endl;
@@ -534,43 +534,43 @@ void UserManager::searchPw() {
         }
         break;
     }
-
+    
     for (auto& user : users) {
         if (user.id == id && user.name == name && user.phone == phone && user.birth == birth) {
             while (1) {
                 string new_pw = "";
                 cout << ">>새로운 비밀번호를 입력해주세요 : ";
-//                char ch = ' ';
-//                while ((ch = getch()) != '\n' && ch != '\r') {
-//                    if (ch == 127 || ch == 8) { // Backspace
-//                        if (!new_pw.empty()) {
-//                            new_pw.pop_back();
-//                            cout << "\b \b";
-//                        }
-//                    } else {
-//                        new_pw.push_back(ch);
-//                        cout << '*';
-//                    }
-//                }
+                //                char ch = ' ';
+                //                while ((ch = getch()) != '\n' && ch != '\r') {
+                //                    if (ch == 127 || ch == 8) { // Backspace
+                //                        if (!new_pw.empty()) {
+                //                            new_pw.pop_back();
+                //                            cout << "\b \b";
+                //                        }
+                //                    } else {
+                //                        new_pw.push_back(ch);
+                //                        cout << '*';
+                //                    }
+                //                }
                 cin >> new_pw;
                 cout << endl;
-
+                
                 string renew_pw = "";
                 cout << ">>다시 한번 입력해주세요. : ";
                 cin >> renew_pw;
-//                while ((ch = getch()) != '\n' && ch != '\r') {
-//                    if (ch == 127 || ch == 8) { // Backspace
-//                        if (!renew_pw.empty()) {
-//                            renew_pw.pop_back();
-//                            cout << "\b \b";
-//                        }
-//                    } else {
-//                        renew_pw.push_back(ch);
-//                        cout << '*';
-//                    }
-//                }
+                //                while ((ch = getch()) != '\n' && ch != '\r') {
+                //                    if (ch == 127 || ch == 8) { // Backspace
+                //                        if (!renew_pw.empty()) {
+                //                            renew_pw.pop_back();
+                //                            cout << "\b \b";
+                //                        }
+                //                    } else {
+                //                        renew_pw.push_back(ch);
+                //                        cout << '*';
+                //                    }
+                //                }
                 cout << endl;
-
+                
                 if (new_pw == renew_pw) {
                     user.pw = new_pw;
                     saveUsers();
@@ -590,6 +590,38 @@ void UserManager::searchPw() {
 
 void UserManager::createUser() {
     string id, pw, name, phone, birth;
+    
+    while (1) {
+        cout << ">>이름 : ";
+        cin >> name;
+        cout << ">>전화번호 : ";
+        cin >> phone;
+        bool phoneExists = false;
+        for (const auto& user : users) {
+            if (user.phone == phone) {
+                cout << "▶동일한 휴대폰 번호로 이미 계정이 존재합니다." << endl;
+                phoneExists = true;
+                break;
+            }
+        }
+        if (phoneExists) {
+            continue;
+        }
+        else {
+            break;
+        }
+    }
+        
+    while (1) {
+        cout << ">>생년월일 : ";
+        cin >> birth;
+        if (birth.length() != 8) {
+            cout << "▶생년월일은 8자리로 입력해주세요." << endl;
+            continue;
+        }
+        break;
+    }
+
     while (1) {
         cout << ">>아이디 : ";
         cin >> id;
@@ -606,56 +638,45 @@ void UserManager::createUser() {
             break;
         }
     }
+        
+
     while (1) {
         cout << ">>비밀번호를 입력해주세요 : ";
         pw = "";
         cin >> pw;
-//        char ch = ' ';
-//        while ((ch = getch()) != '\n' && ch != '\r') {
-//            if (ch == 127 || ch == 8) { // Backspace
-//                if (!pw.empty()) {
-//                    pw.pop_back();
-//                    cout << "\b \b";
-//                }
-//            } else {
-//                pw.push_back(ch);
-//                cout << '*';
-//            }
-//        }
+        //        char ch = ' ';
+        //        while ((ch = getch()) != '\n' && ch != '\r') {
+        //            if (ch == 127 || ch == 8) { // Backspace
+        //                if (!pw.empty()) {
+        //                    pw.pop_back();
+        //                    cout << "\b \b";
+        //                }
+        //            } else {
+        //                pw.push_back(ch);
+        //                cout << '*';
+        //            }
+        //        }
         cout << endl;
         string new_pw = "";
         cout << ">>다시 한번 입력해주세요. : ";
         cin >> new_pw;
-//        while ((ch = getch()) != '\n' && ch != '\r') {
-//            if (ch == 127 || ch == 8) { // Backspace
-//                if (!new_pw.empty()) {
-//                    new_pw.pop_back();
-//                    cout << "\b \b";
-//                }
-//            } else {
-//                new_pw.push_back(ch);
-//                cout << '*';
-//            }
-//        }
+        //        while ((ch = getch()) != '\n' && ch != '\r') {
+        //            if (ch == 127 || ch == 8) { // Backspace
+        //                if (!new_pw.empty()) {
+        //                    new_pw.pop_back();
+        //                    cout << "\b \b";
+        //                }
+        //            } else {
+        //                new_pw.push_back(ch);
+        //                cout << '*';
+        //            }
+        //        }
         cout << endl;
         if (pw == new_pw) {
             break;
         } else {
             cout << "▶비밀번호가 다릅니다." << endl;
         }
-    }
-    cout << ">>이름 : ";
-    cin >> name;
-    cout << ">>전화번호 : ";
-    cin >> phone;
-    while (true) {
-        cout << ">>생년월일 : ";
-        cin >> birth;
-        if (birth.length() != 8) {
-            cout << "▶생년월일은 8자리로 입력해주세요." << endl;
-            continue;
-        }
-        break;
     }
     User newUser = { id, pw, name, phone, birth, "", "" };
     users.push_back(newUser);
@@ -817,55 +838,55 @@ void UserManager::modifyPw() {
     cout << ">>기존 비밀번호를 입력해주세요. : ";
     string existPw = "";
     cin >> existPw;
-//    char ch = ' ';
-//    while ((ch = getch()) != '\n' && ch != '\r') {
-//        if (ch == 127 || ch == 8) { // Backspace
-//            if (!existPw.empty()) {
-//                existPw.pop_back();
-//                cout << "\b \b";
-//            }
-//        } else {
-//            existPw.push_back(ch);
-//            cout << '*';
-//        }
-//    }
+    //    char ch = ' ';
+    //    while ((ch = getch()) != '\n' && ch != '\r') {
+    //        if (ch == 127 || ch == 8) { // Backspace
+    //            if (!existPw.empty()) {
+    //                existPw.pop_back();
+    //                cout << "\b \b";
+    //            }
+    //        } else {
+    //            existPw.push_back(ch);
+    //            cout << '*';
+    //        }
+    //    }
     cout << endl;
-
+    
     for (auto& user : users) {
         if (user.id == currentUserId && user.pw == existPw) {
             while (1) {
                 string new_pw = "";
                 cout << ">>새로운 비밀번호를 입력해주세요 : ";
                 cin >> new_pw;
-//                while ((ch = getch()) != '\n' && ch != '\r') {
-//                    if (ch == 127 || ch == 8) { // Backspace
-//                        if (!new_pw.empty()) {
-//                            new_pw.pop_back();
-//                            cout << "\b \b";
-//                        }
-//                    } else {
-//                        new_pw.push_back(ch);
-//                        cout << '*';
-//                    }
-//                }
+                //                while ((ch = getch()) != '\n' && ch != '\r') {
+                //                    if (ch == 127 || ch == 8) { // Backspace
+                //                        if (!new_pw.empty()) {
+                //                            new_pw.pop_back();
+                //                            cout << "\b \b";
+                //                        }
+                //                    } else {
+                //                        new_pw.push_back(ch);
+                //                        cout << '*';
+                //                    }
+                //                }
                 cout << endl;
-
+                
                 string renew_pw = "";
                 cout << ">>다시 한번 입력해주세요. : ";
                 cin >> renew_pw;
-//                while ((ch = getch()) != '\n' && ch != '\r') {
-//                    if (ch == 127 || ch == 8) { // Backspace
-//                        if (!renew_pw.empty()) {
-//                            renew_pw.pop_back();
-//                            cout << "\b \b";
-//                        }
-//                    } else {
-//                        renew_pw.push_back(ch);
-//                        cout << '*';
-//                    }
-//                }
+                //                while ((ch = getch()) != '\n' && ch != '\r') {
+                //                    if (ch == 127 || ch == 8) { // Backspace
+                //                        if (!renew_pw.empty()) {
+                //                            renew_pw.pop_back();
+                //                            cout << "\b \b";
+                //                        }
+                //                    } else {
+                //                        renew_pw.push_back(ch);
+                //                        cout << '*';
+                //                    }
+                //                }
                 cout << endl;
-
+                
                 if (new_pw == renew_pw) {
                     user.pw = new_pw;
                     saveUsers();
@@ -885,20 +906,20 @@ int UserManager::deleteUser() {
     cout << ">>기존 비밀번호를 입력해주세요. : ";
     string existPw = "";
     cin >> existPw;
-//    char ch = ' ';
-//    while ((ch = getch()) != '\n' && ch != '\r') {
-//        if (ch == 127 || ch == 8) { // Backspace
-//            if (!existPw.empty()) {
-//                existPw.pop_back();
-//                cout << "\b \b";
-//            }
-//        } else {
-//            existPw.push_back(ch);
-//            cout << '*';
-//        }
-////    }
+    //    char ch = ' ';
+    //    while ((ch = getch()) != '\n' && ch != '\r') {
+    //        if (ch == 127 || ch == 8) { // Backspace
+    //            if (!existPw.empty()) {
+    //                existPw.pop_back();
+    //                cout << "\b \b";
+    //            }
+    //        } else {
+    //            existPw.push_back(ch);
+    //            cout << '*';
+    //        }
+    ////    }
     cout << endl;
-
+    
     for (auto it = users.begin(); it != users.end(); ++it) {
         if (it->id == currentUserId && it->pw == existPw) {
             cout << "정말 삭제하시겠습니까? 삭제한 이후엔 되돌릴 수 없습니다. 1. 계속하기, 2. 그만두기 : ";
@@ -947,10 +968,10 @@ void UserManager::beforeChat() {
 }
 
 int main() {
-  initialize:
+initialize:
     UserManager userManager;
     bool loginSuccess = false;
-
+    
     // Start screen
     while (!loginSuccess) {
         startMenu();
@@ -958,40 +979,40 @@ int main() {
         cout << "▶ ";
         cin >> startIn;
         switch (startIn) {
-        case '1': // Login
-            loginMenu();
-            if (userManager.login() == 1) {
-                loginSuccess = true;
-                break;
-            }
-            continue;
-        case '2': // Search ID
-            searchIdMenu();
-            userManager.searchId();
-            continue;
-        case '3': // Search Password
-            searchPwMenu();
-            userManager.searchPw();
-            continue;
-        case '4': // Create User
-            createUserMenu();
-            userManager.createUser();
-            continue;
-        case '0': // Exit
-            return -1;
-        default:
-            cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
-            continue;
+            case '1': // Login
+                loginMenu();
+                if (userManager.login() == 1) {
+                    loginSuccess = true;
+                    break;
+                }
+                continue;
+            case '2': // Search ID
+                searchIdMenu();
+                userManager.searchId();
+                continue;
+            case '3': // Search Password
+                searchPwMenu();
+                userManager.searchPw();
+                continue;
+            case '4': // Create User
+                createUserMenu();
+                userManager.createUser();
+                continue;
+            case '0': // Exit
+                return -1;
+            default:
+                cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                continue;
         }
     }
-
+    
     // Main menu
     while (1) {
         mainMenu();
         int mainIn = 0;
         cout << "▶ ";
         cin >> mainIn;
-
+        
         if (mainIn == 1) { // My Info
             myMenu();
             bool backButton = false;
@@ -1000,21 +1021,21 @@ int main() {
                 cout << "▶ ";
                 cin >> informationIn;
                 switch (informationIn) {
-                case '1':
-                    userManager.myProfile();
-                    break;
-                case '2':
-                    userManager.updateStatus();
-                    continue;
-                case '3':
-                    userManager.updateSong();
-                    continue;
-                case '0':
-                    backButton = true;
-                    break;
-                default:
-                    cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
-                    continue;
+                    case '1':
+                        userManager.myProfile();
+                        break;
+                    case '2':
+                        userManager.updateStatus();
+                        continue;
+                    case '3':
+                        userManager.updateSong();
+                        continue;
+                    case '0':
+                        backButton = true;
+                        break;
+                    default:
+                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        continue;
                 }
             }
         }
@@ -1026,18 +1047,18 @@ int main() {
                 cout << "▶ ";
                 cin >> friendsIn;
                 switch (friendsIn) {
-                case '1':
-                    userManager.showFriends();
-                    continue;
-                case '2':
-                    userManager.searchBirth();
-                    continue;
-                case '0':
-                    backButton = true;
-                    break;
-                default:
-                    cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
-                    continue;
+                    case '1':
+                        userManager.showFriends();
+                        continue;
+                    case '2':
+                        userManager.searchBirth();
+                        continue;
+                    case '0':
+                        backButton = true;
+                        break;
+                    default:
+                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        continue;
                 }
             }
         }
@@ -1049,55 +1070,55 @@ int main() {
                 cout << "▶ ";
                 cin >> chattingIn;
                 switch (chattingIn) {
-                  case '1':{
-                    userManager.beforeChat();
-                    client_sock = socket(AF_INET, SOCK_STREAM, 0);
-                    if (client_sock < 0) {
-                      cout << "Socket creation error" << endl;
-                      return -1;
+                    case '1':{
+                        userManager.beforeChat();
+                        client_sock = socket(AF_INET, SOCK_STREAM, 0);
+                        if (client_sock < 0) {
+                            cout << "Socket creation error" << endl;
+                            return -1;
+                        }
+                        struct sockaddr_in serv_addr;
+                        memset(&serv_addr, 0, sizeof(serv_addr));
+                        serv_addr.sin_family = AF_INET;
+                        serv_addr.sin_port = htons(7777);
+                        if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
+                            cout << "Invalid address/ Address not supported" << endl;
+                            return -1;
+                        }
+                        if (connect(client_sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
+                            cout << "Connection Failed" << endl;
+                            return -1;
+                        }
+                        cout << "< 채팅방에 입장합니다. >" << endl;
+                        my_nick = userManager.getName();
+                        send(client_sock, my_nick.c_str(), my_nick.length(), 0);
+                        std::thread th2(chat_recv);
+                        while (1) {
+                            string text;
+                            std::getline(cin, text);
+                            const char* buffer = text.c_str();
+                            send(client_sock, buffer, strlen(buffer), 0);
+                            if (text == "/종료") {
+                                close(client_sock);
+                                backButton = true;
+                                break;
+                            }
+                        }
+                        th2.join();
+                        break;
                     }
-                    struct sockaddr_in serv_addr;
-                    memset(&serv_addr, 0, sizeof(serv_addr));
-                    serv_addr.sin_family = AF_INET;
-                    serv_addr.sin_port = htons(7777);
-                    if (inet_pton(AF_INET, "127.0.0.1", &serv_addr.sin_addr) <= 0) {
-                      cout << "Invalid address/ Address not supported" << endl;
-                      return -1;
-                    }
-                    if (connect(client_sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
-                      cout << "Connection Failed" << endl;
-                      return -1;
-                    }
-                    cout << "< 채팅방에 입장합니다. >" << endl;
-                    my_nick = userManager.getName();
-                    send(client_sock, my_nick.c_str(), my_nick.length(), 0);
-                    std::thread th2(chat_recv);
-                    while (1) {
-                      string text;
-                      std::getline(cin, text);
-                      const char* buffer = text.c_str();
-                      send(client_sock, buffer, strlen(buffer), 0);
-                      if (text == "/종료") {
-                        close(client_sock);
+                    case '2':
+                        userManager.searchContentMessage();
+                        continue;
+                    case '3':
+                        userManager.searchDayMessage();
+                        continue;
+                    case '0':
                         backButton = true;
                         break;
-                      }
-                    }
-                    th2.join();
-                    break;
-                  }
-                case '2':
-                    userManager.searchContentMessage();
-                    continue;
-                case '3':
-                    userManager.searchDayMessage();
-                    continue;
-                case '0':
-                    backButton = true;
-                    break;
-                default:
-                    cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
-                    continue;
+                    default:
+                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        continue;
                 }
             }
         }
@@ -1110,18 +1131,18 @@ int main() {
                 cin >> settingIn;
                 switch (settingIn)
                 {
-                case '1':
-                    userManager.modifyPw();
-                    continue;
-                case '2':
-                    if (userManager.deleteUser() == 1) goto initialize;
-                    else backButton = true;
-                    break;  // Added break statement here
-                case '0':
-                    backButton = true;
-                    break;
-                default:
-                    cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                    case '1':
+                        userManager.modifyPw();
+                        continue;
+                    case '2':
+                        if (userManager.deleteUser() == 1) goto initialize;
+                        else backButton = true;
+                        break;  // Added break statement here
+                    case '0':
+                        backButton = true;
+                        break;
+                    default:
+                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
                 }
             }
         }
@@ -1135,5 +1156,6 @@ int main() {
     }
     return 0;
 }
+
 
 
