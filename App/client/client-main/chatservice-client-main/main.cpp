@@ -146,18 +146,18 @@ void startMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 시작 화면 >                     *\n";
+    cout << " *               < Start Screen >                *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               1.로그인                          *\n";
+    cout << " *               1. Login                        *\n";
     cout << " *                                               *\n";
-    cout << " *               2. ID 찾기                       *\n";
+    cout << " *               2. Find ID                      *\n";
     cout << " *                                               *\n";
-    cout << " *               3. PW 찾기                       *\n";
+    cout << " *               3. Find Password                *\n";
     cout << " *                                               *\n";
-    cout << " *               4. 회원가입                       *\n";
+    cout << " *               4. Sign Up                      *\n";
     cout << " *                                               *\n";
-    cout << " *               0. 종료                          *\n";
+    cout << " *               0. Exit                         *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
 }
@@ -175,17 +175,17 @@ void loginMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 로그인 화면 >                    *\n";
+    cout << " *               < Login Screen >                *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *              >> 아이디 입력                      *\n";
+    cout << " *              >> Enter ID                      *\n";
     cout << " *                                               *\n";
-    cout << " *              >> 비밀번호 입력                    *\n";
+    cout << " *              >> Enter Password                *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *              >> 완료시 로그인!                   *\n";
+    cout << " *              >> Login upon completion!        *\n";
     cout << " *                                               *\n";
-    cout << " *              >> 실패시 메인화면                   *\n";
+    cout << " *              >> Return to main if failed      *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
@@ -204,18 +204,18 @@ void searchIdMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 아이디 찾기 >                    *\n";
+    cout << " *               < Find ID >                     *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 이름 입력                      *\n";
+    cout << " *               >> Enter Name                   *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 번호 입력                      *\n";
+    cout << " *               >> Enter Phone Number           *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 생년월일(8자리) 입력             *\n";
+    cout << " *               >> Enter Birthdate (8 digits)   *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 완료시 아이디 출력               *\n";
+    cout << " *               >> ID displayed upon success    *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 실패시 메인화면                 *\n";
+    cout << " *               >> Return to main if failed     *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
 }
@@ -233,18 +233,18 @@ void searchPwMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 비밀번호 찾기 >               *\n";
+    cout << " *               < Find Password >               *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 아이디 입력                  *\n";
+    cout << " *               >> Enter ID                     *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 이름 입력                    *\n";
+    cout << " *               >> Enter Name                   *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 전화번호 입력                *\n";
+    cout << " *               >> Enter Phone Number           *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 생년월일(8자리) 입력         *\n";
+    cout << " *               >> Enter Birthdate (8 digits)   *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 완료시 메인화면              *\n";
+    cout << " *               >> Return to main upon success  *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
 }
@@ -262,18 +262,18 @@ void createUserMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               <  회원 가입  >                 *\n";
+    cout << " *               < Sign Up >                     *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 이름, 전화번호 입력                  *\n";
+    cout << " *               >> Enter Name, Phone Number     *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 생년월일(8자리) 입력             *\n";
+    cout << " *               >> Enter Birthdate (8 digits)   *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 아이디 입력              *\n";
+    cout << " *               >> Enter ID                     *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 비밀번호 입력             *\n";
+    cout << " *               >> Enter Password               *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 완료시 메인화면              *\n";
+    cout << " *               >> Return to main upon success  *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
 }
@@ -292,17 +292,17 @@ void mainMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *              < 현재 상태 : 접속 중 >          *\n";
+    cout << " *              < Status: Connected >            *\n";
     cout << " *                                               *\n";
-    cout << " *                1. 내 정보                     *\n";
+    cout << " *                1. My Info                     *\n";
     cout << " *                                               *\n";
-    cout << " *                2. 친구                        *\n";
+    cout << " *                2. Friends                     *\n";
     cout << " *                                               *\n";
-    cout << " *                3. 대화방                      *\n";
+    cout << " *                3. Chat Room                   *\n";
     cout << " *                                               *\n";
-    cout << " *                4. 설정                        *\n";
+    cout << " *                4. Settings                    *\n";
     cout << " *                                               *\n";
-    cout << " *                0. 종료                        *\n";
+    cout << " *                0. Exit                        *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
@@ -321,16 +321,16 @@ void myMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 내 정보 보기 >                *\n";
+    cout << " *               < View My Info >                *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *              1. 내 프로필                     *\n";
+    cout << " *              1. My Profile                    *\n";
     cout << " *                                               *\n";
-    cout << " *              2. 상메 설정/수정                *\n";
+    cout << " *              2. Set/Update Status Msg         *\n";
     cout << " *                                               *\n";
-    cout << " *              3. BGM 설정/수정                 *\n";
+    cout << " *              3. Set/Update BGM                *\n";
     cout << " *                                               *\n";
-    cout << " *              0. 뒤로가기                      *\n";
+    cout << " *              0. Go Back                       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
@@ -350,16 +350,16 @@ void friendsMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 내 친구 정보 >                *\n";
+    cout << " *               < My Friends Info >             *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               1. 친구 목록 보기               *\n";
+    cout << " *               1. View Friend List             *\n";
     cout << " *                                               *\n";
-    cout << " *               2. 친구 생일 검색               *\n";
+    cout << " *               2. Search Birthdays             *\n";
     cout << " *                                               *\n";
-    cout << " *               >> 월일 ~ 월일 검색             *\n";
+    cout << " *               >> Search from MMDD to MMDD     *\n";
     cout << " *                                               *\n";
-    cout << " *               0. 뒤로가기                     *\n";
+    cout << " *               0. Go Back                      *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
@@ -379,19 +379,19 @@ void chattingMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 채팅 입장/검색 >              *\n";
+    cout << " *               < Enter/Search Chat >           *\n";
     cout << " *                                               *\n";
-    cout << " *               1. 채팅방 입장                  *\n";
+    cout << " *               1. Enter Chat Room              *\n";
     cout << " *                                               *\n";
-    cout << " *               >> /귓말 이름 내용입력          *\n";
+    cout << " *               >> /whisper name message        *\n";
     cout << " *                                               *\n";
-    cout << " *               >> /종료 입력시 퇴장            *\n";
+    cout << " *               >> Type /exit to leave          *\n";
     cout << " *                                               *\n";
-    cout << " *               2. 채팅 내용 검색               *\n";
+    cout << " *               2. Search Chat Content          *\n";
     cout << " *                                               *\n";
-    cout << " *               3. 채팅 기간 검색               *\n";
+    cout << " *               3. Search Chat by Date          *\n";
     cout << " *                                               *\n";
-    cout << " *               0. 뒤로가기                     *\n";
+    cout << " *               0. Go Back                      *\n";
     cout << " *************************************************\n\n";
 }
 
@@ -408,17 +408,17 @@ void settingMenu() {
     cout << " *          *     *       *   *****   *  *       *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               < 내 설정 >                     *\n";
+    cout << " *               < My Settings >                 *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               1. 비밀번호 변경                *\n";
+    cout << " *               1. Change Password              *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               2. 회원 탈퇴                    *\n";
+    cout << " *               2. Delete Account               *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
-    cout << " *               0. 뒤로가기                     *\n";
+    cout << " *               0. Go Back                      *\n";
     cout << " *                                               *\n";
     cout << " *                                               *\n";
     cout << " *************************************************\n\n";
@@ -435,8 +435,8 @@ int chat_recv() {
         if (bytes_received > 0) {
             textColor(7);
             msg = buf;
-            //닉네임 : 메시지
-            std::stringstream ss(msg);  // 문자열을 스트림화
+            // Format: nickname : message
+            std::stringstream ss(msg);
             string user;
             ss >> user;
             if (user != my_nick) cout << buf << endl;
@@ -452,10 +452,10 @@ int chat_recv() {
 // Implementation of UserManager methods
 
 int UserManager::login() {
-    cout << ">>아이디 : ";
+    cout << ">>ID: ";
     string id;
     cin >> id;
-    cout << ">>비밀번호를 입력해주세요 : ";
+    cout << ">>Please enter your password: ";
     string pw;
     cin >> pw;
     char ch = ' ';
@@ -476,28 +476,28 @@ int UserManager::login() {
         if (user.id == id && user.pw == pw) {
             currentUserId = id;
             currentUserName = user.name;
-            cout << endl << "▶로그인 중입니다. 잠시만 기다려주세요." << endl << endl;
-            cout << "▶" << user.name << "님 환영합니다." << endl;
+            cout << endl << "▶Logging in. Please wait a moment." << endl << endl;
+            cout << "▶Welcome, " << user.name << "." << endl;
             return 1;
         }
     }
-    cout << "▶해당하는 정보가 없습니다." << endl;
+    cout << "▶No matching information found." << endl;
     return 0;
 }
 
 void UserManager::searchId() {
-    cout << ">>이름 : ";
+    cout << ">>Name: ";
     string name;
     cin >> name;
-    cout << ">>전화번호 : ";
+    cout << ">>Phone Number: ";
     string phone;
     cin >> phone;
     string birth;
     while (true) {
-        cout << ">>생년월일 : ";
+        cout << ">>Birthdate: ";
         cin >> birth;
         if (birth.length() != 8) {
-            cout << "▶생년월일은 8자리로 입력해주세요." << endl;
+            cout << "▶Please enter birthdate in 8 digits." << endl;
             continue;
         }
         break;
@@ -505,31 +505,31 @@ void UserManager::searchId() {
     
     for (const auto& user : users) {
         if (user.name == name && user.phone == phone && user.birth == birth) {
-            cout << "▶" << name << "님의 아이디는 " << user.id << "입니다." << endl;
+            cout << "▶" << name << "'s ID is " << user.id << "." << endl;
             usleep(3000 * 1000);
             return;
         }
     }
-    cout << "▶해당하는 정보가 없습니다.!" << endl;
+    cout << "▶No matching information found!" << endl;
     usleep(500 * 1000);
 }
 
 void UserManager::searchPw() {
-    cout << ">>아이디 : ";
+    cout << ">>ID: ";
     string id;
     cin >> id;
-    cout << ">>이름 : ";
+    cout << ">>Name: ";
     string name;
     cin >> name;
-    cout << ">>전화번호 : ";
+    cout << ">>Phone Number: ";
     string phone;
     cin >> phone;
     string birth;
     while (true) {
-        cout << ">>생년월일 : ";
+        cout << ">>Birthdate: ";
         cin >> birth;
         if (birth.length() != 8) {
-            cout << "▶생년월일은 8자리로 입력해주세요." << endl;
+            cout << "▶Please enter birthdate in 8 digits." << endl;
             continue;
         }
         break;
@@ -539,52 +539,29 @@ void UserManager::searchPw() {
         if (user.id == id && user.name == name && user.phone == phone && user.birth == birth) {
             while (1) {
                 string new_pw = "";
-                cout << ">>새로운 비밀번호를 입력해주세요 : ";
-                //                char ch = ' ';
-                //                while ((ch = getch()) != '\n' && ch != '\r') {
-                //                    if (ch == 127 || ch == 8) { // Backspace
-                //                        if (!new_pw.empty()) {
-                //                            new_pw.pop_back();
-                //                            cout << "\b \b";
-                //                        }
-                //                    } else {
-                //                        new_pw.push_back(ch);
-                //                        cout << '*';
-                //                    }
-                //                }
+                cout << ">>Please enter a new password: ";
                 cin >> new_pw;
                 cout << endl;
                 
                 string renew_pw = "";
-                cout << ">>다시 한번 입력해주세요. : ";
+                cout << ">>Please re-enter to confirm: ";
                 cin >> renew_pw;
-                //                while ((ch = getch()) != '\n' && ch != '\r') {
-                //                    if (ch == 127 || ch == 8) { // Backspace
-                //                        if (!renew_pw.empty()) {
-                //                            renew_pw.pop_back();
-                //                            cout << "\b \b";
-                //                        }
-                //                    } else {
-                //                        renew_pw.push_back(ch);
-                //                        cout << '*';
-                //                    }
-                //                }
                 cout << endl;
                 
                 if (new_pw == renew_pw) {
                     user.pw = new_pw;
                     saveUsers();
-                    printf("▶새로운 비밀번호로 변경되었습니다.\n");
+                    printf("▶Password has been changed to the new password.\n");
                     usleep(500 * 1000);
                     return;
                 } else {
-                    cout << "▶비밀번호가 다릅니다." << endl;
+                    cout << "▶Passwords do not match." << endl;
                     usleep(500 * 1000);
                 }
             }
         }
     }
-    cout << "▶해당하는 정보가 없습니다." << endl;
+    cout << "▶No matching information found." << endl;
     usleep(500 * 1000);
 }
 
@@ -592,14 +569,14 @@ void UserManager::createUser() {
     string id, pw, name, phone, birth;
     
     while (1) {
-        cout << ">>이름 : ";
+        cout << ">>Name: ";
         cin >> name;
-        cout << ">>전화번호 : ";
+        cout << ">>Phone Number: ";
         cin >> phone;
         bool phoneExists = false;
         for (const auto& user : users) {
             if (user.phone == phone) {
-                cout << "▶동일한 휴대폰 번호로 이미 계정이 존재합니다." << endl;
+                cout << "▶An account already exists with the same phone number." << endl;
                 phoneExists = true;
                 break;
             }
@@ -613,75 +590,52 @@ void UserManager::createUser() {
     }
         
     while (1) {
-        cout << ">>생년월일 : ";
+        cout << ">>Birthdate: ";
         cin >> birth;
         if (birth.length() != 8) {
-            cout << "▶생년월일은 8자리로 입력해주세요." << endl;
+            cout << "▶Please enter birthdate in 8 digits." << endl;
             continue;
         }
         break;
     }
 
     while (1) {
-        cout << ">>아이디 : ";
+        cout << ">>ID: ";
         cin >> id;
         bool idExists = false;
         for (const auto& user : users) {
             if (user.id == id) {
-                cout << "▶중복된 아이디가 있습니다." << endl;
+                cout << "▶This ID is already taken." << endl;
                 idExists = true;
                 break;
             }
         }
         if (!idExists) {
-            cout << "▶중복체크 완료." << endl;
+            cout << "▶ID is available." << endl;
             break;
         }
     }
         
 
     while (1) {
-        cout << ">>비밀번호를 입력해주세요 : ";
+        cout << ">>Please enter a password: ";
         pw = "";
         cin >> pw;
-        //        char ch = ' ';
-        //        while ((ch = getch()) != '\n' && ch != '\r') {
-        //            if (ch == 127 || ch == 8) { // Backspace
-        //                if (!pw.empty()) {
-        //                    pw.pop_back();
-        //                    cout << "\b \b";
-        //                }
-        //            } else {
-        //                pw.push_back(ch);
-        //                cout << '*';
-        //            }
-        //        }
         cout << endl;
         string new_pw = "";
-        cout << ">>다시 한번 입력해주세요. : ";
+        cout << ">>Please re-enter to confirm: ";
         cin >> new_pw;
-        //        while ((ch = getch()) != '\n' && ch != '\r') {
-        //            if (ch == 127 || ch == 8) { // Backspace
-        //                if (!new_pw.empty()) {
-        //                    new_pw.pop_back();
-        //                    cout << "\b \b";
-        //                }
-        //            } else {
-        //                new_pw.push_back(ch);
-        //                cout << '*';
-        //            }
-        //        }
         cout << endl;
         if (pw == new_pw) {
             break;
         } else {
-            cout << "▶비밀번호가 다릅니다." << endl;
+            cout << "▶Passwords do not match." << endl;
         }
     }
     User newUser = { id, pw, name, phone, birth, "", "" };
     users.push_back(newUser);
     saveUsers();
-    cout << "▶회원가입이 완료되었습니다." << endl;
+    cout << "▶Sign up completed." << endl;
     usleep(500 * 1000);
 }
 
@@ -689,19 +643,19 @@ void UserManager::myProfile() {
     for (const auto& user : users) {
         if (user.id == currentUserId) {
             cout << "-----------------------------------------" << endl;
-            cout << "▷이름 : " << user.name << endl;
+            cout << "▷Name: " << user.name << endl;
             if (user.status == "") {
-                cout << "▷상메 : 없음" << endl;
+                cout << "▷Status Msg: None" << endl;
             } else {
-                cout << "▷상메 : " << user.status << endl;
+                cout << "▷Status Msg: " << user.status << endl;
             }
             if (user.song == "") {
-                cout << "▷노래 : 없음" << endl;
+                cout << "▷Song: None" << endl;
             } else {
-                cout << "▷노래 : " << user.song << endl;
+                cout << "▷Song: " << user.song << endl;
             }
-            cout << "▷생일 : " << user.birth << endl;
-            cout << "▷번호 : " << user.phone << endl;
+            cout << "▷Birthdate: " << user.birth << endl;
+            cout << "▷Phone: " << user.phone << endl;
             cout << "-----------------------------------------" << endl;
             return;
         }
@@ -709,7 +663,7 @@ void UserManager::myProfile() {
 }
 
 void UserManager::updateStatus() {
-    cout << ">>상태메시지 입력 : ";
+    cout << ">>Enter status message: ";
     string status;
     cin.ignore();
     getline(cin, status);
@@ -717,14 +671,14 @@ void UserManager::updateStatus() {
         if (user.id == currentUserId) {
             user.status = status;
             saveUsers();
-            printf("▶업데이트 되었습니다.\n");
+            printf("▶Updated successfully.\n");
             return;
         }
     }
 }
 
 void UserManager::updateSong() {
-    cout << ">>노래 입력 : ";
+    cout << ">>Enter song: ";
     string song;
     cin.ignore();
     getline(cin, song);
@@ -732,7 +686,7 @@ void UserManager::updateSong() {
         if (user.id == currentUserId) {
             user.song = song;
             saveUsers();
-            printf("▶업데이트 되었습니다.\n");
+            printf("▶Updated successfully.\n");
             return;
         }
     }
@@ -742,28 +696,28 @@ void UserManager::showFriends() {
     for (const auto& user : users) {
         if (user.id != currentUserId) {
             cout << "-----------------------------" << endl;
-            cout << "▷이름 : " << user.name << endl;
+            cout << "▷Name: " << user.name << endl;
             if (user.status == "") {
-                cout << "▷상메 : 없음" << endl;
+                cout << "▷Status Msg: None" << endl;
             } else {
-                cout << "▷상메 : " << user.status << endl;
+                cout << "▷Status Msg: " << user.status << endl;
             }
             if (user.song == "") {
-                cout << "▷노래 : 없음" << endl;
+                cout << "▷Song: None" << endl;
             } else {
-                cout << "▷노래 : " << user.song << endl;
+                cout << "▷Song: " << user.song << endl;
             }
-            cout << "▷생일 : " << user.birth << endl;
-            cout << "▷번호 : " << user.phone << endl;
+            cout << "▷Birthdate: " << user.birth << endl;
+            cout << "▷Phone: " << user.phone << endl;
         }
     }
 }
 
 void UserManager::searchBirth() {
     string startDay, endDay;
-    cout << "시작월일 4자리를 입력해주세요.(ex.0201) : ";
+    cout << "Please enter the start month and day (4 digits, e.g., 0201): ";
     cin >> startDay;
-    cout << "종료월일 4자리를 입력해주세요.(ex.0405) : ";
+    cout << "Please enter the end month and day (4 digits, e.g., 0405): ";
     cin >> endDay;
     bool found = false;
     for (const auto& user : users) {
@@ -771,25 +725,25 @@ void UserManager::searchBirth() {
             string userMonthDay = user.birth.substr(4, 4);
             if (userMonthDay >= startDay && userMonthDay <= endDay) {
                 cout << "-----------------------------------------------" << endl;
-                cout << "▷이름 : " << user.name << endl;
-                cout << "▷생일 : " << user.birth << endl;
-                cout << "▷번호 : " << user.phone << endl;
+                cout << "▷Name: " << user.name << endl;
+                cout << "▷Birthdate: " << user.birth << endl;
+                cout << "▷Phone: " << user.phone << endl;
                 found = true;
             }
         }
     }
     if (!found) {
-        cout << "검색 결과가 없습니다." << endl;
+        cout << "No results found." << endl;
     }
 }
 
 void UserManager::searchContentMessage() {
     string content;
-    cout << ">>내용에 따른 메시지 검색 : ";
+    cout << ">>Search messages by content: ";
     cin >> content;
     std::ifstream inFile(CHAT_HISTORY_FILE);
     if (!inFile) {
-        cout << "채팅 기록이 없습니다." << endl;
+        cout << "No chat history." << endl;
         return;
     }
     string line;
@@ -802,19 +756,19 @@ void UserManager::searchContentMessage() {
     }
     inFile.close();
     if (!found) {
-        cout << "검색 결과가 없습니다." << endl;
+        cout << "No results found." << endl;
     }
 }
 
 void UserManager::searchDayMessage() {
     string startDay, endDay;
-    cout << "시작월일 4자리를 입력해주세요.(ex.0201) : ";
+    cout << "Please enter the start month and day (4 digits, e.g., 0201): ";
     cin >> startDay;
-    cout << "종료월일 4자리를 입력해주세요.(ex.0405) : ";
+    cout << "Please enter the end month and day (4 digits, e.g., 0405): ";
     cin >> endDay;
     std::ifstream inFile(CHAT_HISTORY_FILE);
     if (!inFile) {
-        cout << "채팅 기록이 없습니다." << endl;
+        cout << "No chat history." << endl;
         return;
     }
     string line;
@@ -830,116 +784,70 @@ void UserManager::searchDayMessage() {
     }
     inFile.close();
     if (!found) {
-        cout << "검색 결과가 없습니다." << endl;
+        cout << "No results found." << endl;
     }
 }
 
 void UserManager::modifyPw() {
-    cout << ">>기존 비밀번호를 입력해주세요. : ";
+    cout << ">>Please enter your current password: ";
     string existPw = "";
     cin >> existPw;
-    //    char ch = ' ';
-    //    while ((ch = getch()) != '\n' && ch != '\r') {
-    //        if (ch == 127 || ch == 8) { // Backspace
-    //            if (!existPw.empty()) {
-    //                existPw.pop_back();
-    //                cout << "\b \b";
-    //            }
-    //        } else {
-    //            existPw.push_back(ch);
-    //            cout << '*';
-    //        }
-    //    }
     cout << endl;
     
     for (auto& user : users) {
         if (user.id == currentUserId && user.pw == existPw) {
             while (1) {
                 string new_pw = "";
-                cout << ">>새로운 비밀번호를 입력해주세요 : ";
+                cout << ">>Please enter a new password: ";
                 cin >> new_pw;
-                //                while ((ch = getch()) != '\n' && ch != '\r') {
-                //                    if (ch == 127 || ch == 8) { // Backspace
-                //                        if (!new_pw.empty()) {
-                //                            new_pw.pop_back();
-                //                            cout << "\b \b";
-                //                        }
-                //                    } else {
-                //                        new_pw.push_back(ch);
-                //                        cout << '*';
-                //                    }
-                //                }
                 cout << endl;
                 
                 string renew_pw = "";
-                cout << ">>다시 한번 입력해주세요. : ";
+                cout << ">>Please re-enter to confirm: ";
                 cin >> renew_pw;
-                //                while ((ch = getch()) != '\n' && ch != '\r') {
-                //                    if (ch == 127 || ch == 8) { // Backspace
-                //                        if (!renew_pw.empty()) {
-                //                            renew_pw.pop_back();
-                //                            cout << "\b \b";
-                //                        }
-                //                    } else {
-                //                        renew_pw.push_back(ch);
-                //                        cout << '*';
-                //                    }
-                //                }
                 cout << endl;
                 
                 if (new_pw == renew_pw) {
                     user.pw = new_pw;
                     saveUsers();
-                    printf("▶새로운 비밀번호로 변경되었습니다.\n");
+                    printf("▶Password has been changed to the new password.\n");
                     break;
                 } else {
-                    cout << "▶비밀번호가 다릅니다." << endl;
+                    cout << "▶Passwords do not match." << endl;
                 }
             }
             return;
         }
     }
-    cout << "▶비밀번호가 다릅니다." << endl;
+    cout << "▶Incorrect password." << endl;
 }
 
 int UserManager::deleteUser() {
-    cout << ">>기존 비밀번호를 입력해주세요. : ";
+    cout << ">>Please enter your current password: ";
     string existPw = "";
     cin >> existPw;
-    //    char ch = ' ';
-    //    while ((ch = getch()) != '\n' && ch != '\r') {
-    //        if (ch == 127 || ch == 8) { // Backspace
-    //            if (!existPw.empty()) {
-    //                existPw.pop_back();
-    //                cout << "\b \b";
-    //            }
-    //        } else {
-    //            existPw.push_back(ch);
-    //            cout << '*';
-    //        }
-    ////    }
     cout << endl;
     
     for (auto it = users.begin(); it != users.end(); ++it) {
         if (it->id == currentUserId && it->pw == existPw) {
-            cout << "정말 삭제하시겠습니까? 삭제한 이후엔 되돌릴 수 없습니다. 1. 계속하기, 2. 그만두기 : ";
+            cout << "Are you sure you want to delete your account? This cannot be undone. 1. Continue, 2. Cancel: ";
             char lastCheck;
             cin >> lastCheck;
             if (lastCheck == '1') {
                 users.erase(it);
                 saveUsers();
-                cout << "▶그동안 감사했습니다. 또 이용해주세요." << endl;
+                cout << "▶Thank you for using our service. Please come again." << endl;
                 return 1;
             } else if (lastCheck == '2') {
-                cout << "잘 생각하셨습니다.." << endl;
+                cout << "Good decision." << endl;
                 return 2;
             } else {
-                cout << "▶잘못된 입력입니다." << endl;
+                cout << "▶Invalid input." << endl;
                 return 2;
             }
         }
     }
-    cout << "▶비밀번호가 다릅니다." << endl;
+    cout << "▶Incorrect password." << endl;
     return 2;
 }
 
@@ -950,7 +858,7 @@ string UserManager::getName() {
 void UserManager::beforeChat() {
     std::ifstream inFile(CHAT_HISTORY_FILE);
     if (!inFile) {
-        cout << "채팅 기록이 없습니다." << endl;
+        cout << "No chat history." << endl;
         return;
     }
     std::vector<string> lines;
@@ -1001,7 +909,7 @@ initialize:
             case '0': // Exit
                 return -1;
             default:
-                cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                cout << "▶Invalid input. Please try again." << endl;
                 continue;
         }
     }
@@ -1034,7 +942,7 @@ initialize:
                         backButton = true;
                         break;
                     default:
-                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        cout << "▶Invalid input. Please try again." << endl;
                         continue;
                 }
             }
@@ -1057,7 +965,7 @@ initialize:
                         backButton = true;
                         break;
                     default:
-                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        cout << "▶Invalid input. Please try again." << endl;
                         continue;
                 }
             }
@@ -1089,7 +997,7 @@ initialize:
                             cout << "Connection Failed" << endl;
                             return -1;
                         }
-                        cout << "< 채팅방에 입장합니다. >" << endl;
+                        cout << "< Entering the chat room. >" << endl;
                         my_nick = userManager.getName();
                         send(client_sock, my_nick.c_str(), my_nick.length(), 0);
                         std::thread th2(chat_recv);
@@ -1098,7 +1006,7 @@ initialize:
                             std::getline(cin, text);
                             const char* buffer = text.c_str();
                             send(client_sock, buffer, strlen(buffer), 0);
-                            if (text == "/종료") {
+                            if (text == "/exit") {
                                 close(client_sock);
                                 backButton = true;
                                 break;
@@ -1117,7 +1025,7 @@ initialize:
                         backButton = true;
                         break;
                     default:
-                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        cout << "▶Invalid input. Please try again." << endl;
                         continue;
                 }
             }
@@ -1137,25 +1045,22 @@ initialize:
                     case '2':
                         if (userManager.deleteUser() == 1) goto initialize;
                         else backButton = true;
-                        break;  // Added break statement here
+                        break;
                     case '0':
                         backButton = true;
                         break;
                     default:
-                        cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+                        cout << "▶Invalid input. Please try again." << endl;
                 }
             }
         }
         else if (mainIn == 0) { // Exit
-            cout << "프로그램을 종료합니다." << endl;
+            cout << "Exiting the program." << endl;
             return 0;
         }
         else {
-            cout << "▶잘못된 입력입니다. 다시 입력해주세요." << endl;
+            cout << "▶Invalid input. Please try again." << endl;
         }
     }
     return 0;
 }
-
-
-
