@@ -15,33 +15,33 @@ using std::endl;
 using std::string;
 using std::vector;
 
-#define MAX_SIZE 1024 // 경성 선언
-#define MAX_CLIENT 3  // 최대 인원 3
+#define MAX_SIZE 1024 // Constant declaration
+#define MAX_CLIENT 3  // Maximum number of clients is 3
 
-struct SOCKET_INFO { // 구조체 정의
-    int sck = 0; // 소켓 번호
-    string user = ""; // 유저 이름
+struct SOCKET_INFO { // Structure definition
+    int sck = 0;      // Socket number
+    string user = ""; // User name
 };
 
-vector<SOCKET_INFO> sck_list; // 서버에 연결된 클라이언트를 저장할 변수.
-SOCKET_INFO server_sock; // 서버 소켓의 정보를 저장할 구조체.
-int client_count = 0; // 현재 접속된 클라이언트 수 카운트 용단.
+vector<SOCKET_INFO> sck_list; // Variable to store clients connected to the server.
+SOCKET_INFO server_sock;      // Structure to store server socket information.
+int client_count = 0;         // Used to count the number of currently connected clients.
 
 void mainMenu();
-void server_init(); // 서버용 소켓을 만든다
-void add_client(); // 클라이언트 연결 함수
-void send_msg(const char* msg); // 클라이언트로 메시지 전송 함수
+void server_init();                           // Create socket for server
+void add_client();                            // Client connection function
+void send_msg(const char* msg);               // Function to send message to clients
 void send_msg_notMe(const char* msg, int sender_idx);
 void sendWhisper(int position, string sbuf, int idx);
-void recv_msg(int idx); // 클라이언트로부터 메시지 수신
-void del_client(int idx); // 클라이언트와의 연결을 끊는 함수
+void recv_msg(int idx);       // Receive message from client
+void del_client(int idx);     // Function to disconnect from client
 void print_clients();
 
 int main() {
-    system("echo \033[0;36m"); // 터미널 색상 설정 (Mac용)
+    system("echo \033[0;36m"); // Set terminal color (Mac)
     mainMenu();
 
-    server_init(); // 서버 초기화
+    server_init(); // Initialize server
 
     std::thread th1[MAX_CLIENT];
     for (int i = 0; i < MAX_CLIENT; i++) {
@@ -103,7 +103,7 @@ void add_client() {
     recv(new_client.sck, buf, MAX_SIZE, 0);
     new_client.user = string(buf);
 
-    string msg = "▶" + new_client.user + " 님이 입장하셨습니다.";
+    string msg = "▶" + new_client.user + " has entered.";
     cout << msg << endl;
     sck_list.push_back(new_client);
     print_clients();
@@ -112,7 +112,7 @@ void add_client() {
     th.detach();
     client_count++;
 
-    cout << "▷현재 접속자 수 : " << client_count << "명" << endl;
+    cout << "▷Current number of connections: " << client_count << endl;
     send_msg(msg.c_str());
 }
 
@@ -137,7 +137,7 @@ void sendWhisper(int position, string sbuf, int idx) {
     string receiver = sbuf.substr(cur_position, len);
     cur_position = position + 1;
     string dm = sbuf.substr(cur_position);
-    string msg = "※귓속말 도착 [" + sck_list[idx].user + "] : " + dm;
+    string msg = "※Whisper received from [" + sck_list[idx].user + "] : " + dm;
     for (int i = 0; i < client_count; i++) {
         if (receiver.compare(sck_list[i].user) == 0) {
             send(sck_list[i].sck, msg.c_str(), MAX_SIZE, 0);
@@ -157,24 +157,24 @@ void recv_msg(int idx) {
             int position = whisper.find(" ", 0);
             int message = position - 0;
             string flag = whisper.substr(0, message);
-            if (string(buf) == "/종료") {
-                msg = "▶" + sck_list[idx].user + " 님이 퇴장하셨습니다.";
+            if (string(buf) == "/exit") {
+                msg = "▶" + sck_list[idx].user + " has left.";
                 cout << msg << endl;
                 send_msg(msg.c_str());
                 del_client(idx);
                 return;
-            } else if (flag.compare("/귓말") == 0) {
+            } else if (flag.compare("/whisper") == 0) {
                 sendWhisper(position, whisper, idx);
             } else {
                 msg += "--------------------------------------------------";
-                msg += "\n▷보낸사람: " + sck_list[idx].user + "  " + "▷보낸시간: 잠시후\n";
-                msg += "▷내용 : " + whisper + "\n";
+                msg += "\n▷Sender: " + sck_list[idx].user + "  " + "▷Time Sent: Soon\n";
+                msg += "▷Content: " + whisper + "\n";
                 msg += "--------------------------------------------------\n";
                 cout << msg << endl;
                 send_msg_notMe(msg.c_str(), idx);
             }
         } else {
-            msg = "[공지] " + sck_list[idx].user + " 님이 퇴장하셨습니다.";
+            msg = "[Notice] " + sck_list[idx].user + " has left.";
             cout << msg << endl;
             send_msg(msg.c_str());
             del_client(idx);
@@ -187,16 +187,15 @@ void del_client(int idx) {
     std::thread th(add_client);
     close(sck_list[idx].sck);
     client_count--;
-    cout << "▷현재 접속자 수 : " << client_count << "명" << endl;
+    cout << "▷Current number of connections: " << client_count << endl;
     sck_list.erase(sck_list.begin() + idx);
     th.join();
 }
 
 void print_clients() {
-    cout << "▷현재 접속 : ";
+    cout << "▷Currently connected: ";
     for (auto& client : sck_list) {
         cout << client.user << " ";
     }
     cout << endl;
 }
-
