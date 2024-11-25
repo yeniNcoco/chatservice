@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <iomanip>
 #include <thread>
 #include <vector>
 #include <sstream>
@@ -36,6 +38,7 @@ void sendWhisper(int position, string sbuf, int idx);
 void recv_msg(int idx);       // Receive message from client
 void del_client(int idx);     // Function to disconnect from client
 void print_clients();
+string getCurrentTimeString();
 
 int main() {
     system("echo \033[0;36m"); // Set terminal color (Mac)
@@ -130,6 +133,17 @@ void send_msg_notMe(const char* msg, int sender_idx) {
     }
 }
 
+std::string getCurrentTimeString() {
+    auto now = std::chrono::system_clock::now();  // Get the current time using system_clock
+    std::time_t now_c = std::chrono::system_clock::to_time_t(now);  // Convert system_clock to time_t
+
+    std::ostringstream oss;  // Create a string stream
+    oss << std::put_time(std::localtime(&now_c), "%Y-%m-%d %H:%M:%S");  // Format the time into the stream
+
+    return oss.str();  // Return the formatted string
+}
+
+
 void sendWhisper(int position, string sbuf, int idx) {
     int cur_position = position + 1;
     position = sbuf.find(" ", cur_position);
@@ -148,6 +162,7 @@ void sendWhisper(int position, string sbuf, int idx) {
 void recv_msg(int idx) {
     char buf[MAX_SIZE] = {};
     string msg = "";
+    std::string currentTime = getCurrentTimeString();
 
     while (1) {
         memset(buf, 0, MAX_SIZE);
@@ -167,8 +182,8 @@ void recv_msg(int idx) {
                 sendWhisper(position, whisper, idx);
             } else {
                 msg += "--------------------------------------------------";
-                msg += "\n▷Sender: " + sck_list[idx].user + "  " + "▷Time Sent: Soon\n";
-                msg += "▷Content: " + whisper + "\n";
+                msg += "\n▷Sender: " + sck_list[idx].user + "  " + "▷Time Sent: " + currentTime;
+                msg += "\n▷Content: " + whisper + "\n";
                 msg += "--------------------------------------------------\n";
                 cout << msg << endl;
                 send_msg_notMe(msg.c_str(), idx);

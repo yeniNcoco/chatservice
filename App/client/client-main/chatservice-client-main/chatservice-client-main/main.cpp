@@ -1,6 +1,8 @@
 #include <string>
 #include <sstream>
 #include <iostream>
+#include <chrono>
+#include <iomanip>
 #include <thread>
 #include <vector>
 #include <fstream>
@@ -748,6 +750,7 @@ void UserManager::searchContentMessage() {
     }
     string line;
     bool found = false;
+    
     while (getline(inFile, line)) {
         if (line.find(content) != string::npos) {
             cout << line << endl;
