@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		919BE0E62CE1A80B00B3A9E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 919BE0E52CE1A80B00B3A9E7 /* main.cpp */; };
+		91BD9BF72CF41A18005B6716 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91BD9BF62CF41A18005B6716 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		919BE0E02CE1A80B00B3A9E7 /* CopyFiles */ = {
+		91BD9BF12CF41A18005B6716 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		919BE0E22CE1A80B00B3A9E7 /* chatservice-client-main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "chatservice-client-main"; sourceTree = BUILT_PRODUCTS_DIR; };
-		919BE0E52CE1A80B00B3A9E7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		91BD9BF32CF41A18005B6716 /* chatservice-client-main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "chatservice-client-main"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91BD9BF62CF41A18005B6716 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		919BE0DF2CE1A80B00B3A9E7 /* Frameworks */ = {
+		91BD9BF02CF41A18005B6716 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		919BE0D92CE1A80B00B3A9E7 = {
+		91BD9BEA2CF41A18005B6716 = {
 			isa = PBXGroup;
 			children = (
-				919BE0E42CE1A80B00B3A9E7 /* chatservice-client-main */,
-				919BE0E32CE1A80B00B3A9E7 /* Products */,
+				91BD9BF52CF41A18005B6716 /* chatservice-client-main */,
+				91BD9BF42CF41A18005B6716 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		919BE0E32CE1A80B00B3A9E7 /* Products */ = {
+		91BD9BF42CF41A18005B6716 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				919BE0E22CE1A80B00B3A9E7 /* chatservice-client-main */,
+				91BD9BF32CF41A18005B6716 /* chatservice-client-main */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		919BE0E42CE1A80B00B3A9E7 /* chatservice-client-main */ = {
+		91BD9BF52CF41A18005B6716 /* chatservice-client-main */ = {
 			isa = PBXGroup;
 			children = (
-				919BE0E52CE1A80B00B3A9E7 /* main.cpp */,
+				91BD9BF62CF41A18005B6716 /* main.cpp */,
 			);
 			path = "chatservice-client-main";
 			sourceTree = "<group>";
@@ -65,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		919BE0E12CE1A80B00B3A9E7 /* chatservice-client-main */ = {
+		91BD9BF22CF41A18005B6716 /* chatservice-client-main */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 919BE0E92CE1A80B00B3A9E7 /* Build configuration list for PBXNativeTarget "chatservice-client-main" */;
+			buildConfigurationList = 91BD9BFA2CF41A18005B6716 /* Build configuration list for PBXNativeTarget "chatservice-client-main" */;
 			buildPhases = (
-				919BE0DE2CE1A80B00B3A9E7 /* Sources */,
-				919BE0DF2CE1A80B00B3A9E7 /* Frameworks */,
-				919BE0E02CE1A80B00B3A9E7 /* CopyFiles */,
+				91BD9BEF2CF41A18005B6716 /* Sources */,
+				91BD9BF02CF41A18005B6716 /* Frameworks */,
+				91BD9BF12CF41A18005B6716 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,24 +79,24 @@
 			);
 			name = "chatservice-client-main";
 			productName = "chatservice-client-main";
-			productReference = 919BE0E22CE1A80B00B3A9E7 /* chatservice-client-main */;
+			productReference = 91BD9BF32CF41A18005B6716 /* chatservice-client-main */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		919BE0DA2CE1A80B00B3A9E7 /* Project object */ = {
+		91BD9BEB2CF41A18005B6716 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
-					919BE0E12CE1A80B00B3A9E7 = {
+					91BD9BF22CF41A18005B6716 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
-			buildConfigurationList = 919BE0DD2CE1A80B00B3A9E7 /* Build configuration list for PBXProject "chatservice-client-main" */;
+			buildConfigurationList = 91BD9BEE2CF41A18005B6716 /* Build configuration list for PBXProject "chatservice-client-main" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 919BE0D92CE1A80B00B3A9E7;
-			productRefGroup = 919BE0E32CE1A80B00B3A9E7 /* Products */;
+			mainGroup = 91BD9BEA2CF41A18005B6716;
+			productRefGroup = 91BD9BF42CF41A18005B6716 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				919BE0E12CE1A80B00B3A9E7 /* chatservice-client-main */,
+				91BD9BF22CF41A18005B6716 /* chatservice-client-main */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		919BE0DE2CE1A80B00B3A9E7 /* Sources */ = {
+		91BD9BEF2CF41A18005B6716 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				919BE0E62CE1A80B00B3A9E7 /* main.cpp in Sources */,
+				91BD9BF72CF41A18005B6716 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		919BE0E72CE1A80B00B3A9E7 /* Debug */ = {
+		91BD9BF82CF41A18005B6716 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -187,7 +187,7 @@
 			};
 			name = Debug;
 		};
-		919BE0E82CE1A80B00B3A9E7 /* Release */ = {
+		91BD9BF92CF41A18005B6716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +241,7 @@
 			};
 			name = Release;
 		};
-		919BE0EA2CE1A80B00B3A9E7 /* Debug */ = {
+		91BD9BFB2CF41A18005B6716 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -249,7 +249,7 @@
 			};
 			name = Debug;
 		};
-		919BE0EB2CE1A80B00B3A9E7 /* Release */ = {
+		91BD9BFC2CF41A18005B6716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -260,25 +260,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		919BE0DD2CE1A80B00B3A9E7 /* Build configuration list for PBXProject "chatservice-client-main" */ = {
+		91BD9BEE2CF41A18005B6716 /* Build configuration list for PBXProject "chatservice-client-main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				919BE0E72CE1A80B00B3A9E7 /* Debug */,
-				919BE0E82CE1A80B00B3A9E7 /* Release */,
+				91BD9BF82CF41A18005B6716 /* Debug */,
+				91BD9BF92CF41A18005B6716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		919BE0E92CE1A80B00B3A9E7 /* Build configuration list for PBXNativeTarget "chatservice-client-main" */ = {
+		91BD9BFA2CF41A18005B6716 /* Build configuration list for PBXNativeTarget "chatservice-client-main" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				919BE0EA2CE1A80B00B3A9E7 /* Debug */,
-				919BE0EB2CE1A80B00B3A9E7 /* Release */,
+				91BD9BFB2CF41A18005B6716 /* Debug */,
+				91BD9BFC2CF41A18005B6716 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 919BE0DA2CE1A80B00B3A9E7 /* Project object */;
+	rootObject = 91BD9BEB2CF41A18005B6716 /* Project object */;
 }

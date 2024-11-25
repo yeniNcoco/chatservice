@@ -8,7 +8,7 @@
 #include <termios.h>   // For getch()
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <arpa/inet.h> // For inet_pton()
+#include <arpa/inet.h> // For inet_pton()s
 #include <netinet/in.h>
 #include <netdb.h>     // For gethostbyname()
 #include <cstring>     // For memset
@@ -1064,3 +1064,4 @@ initialize:
     }
     return 0;
 }
+
